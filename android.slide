@@ -1,0 +1,24 @@
+Desenvolvimento de Aplicativos para Android
+Uma breve introdução
+2018
+Tags: android
+
+Tarcisio da Rocha
+Professor, DCOMP/UFS
+tarcisio@dcomp.ufs.br
+http://tarcisio.dcomp.ufs.br/
+
+
+
+* Fundamentos
+- Aplicativos Android podem ser desenvolvidos com o Android Studio/SDK em:
+	--Java
+	--Kotlin
+	--C++  
+- 
+
+* Queues
+
+* Exchanges
+- Direct
+- Fanout
