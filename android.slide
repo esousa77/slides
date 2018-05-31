@@ -11,11 +11,10 @@ http://tarcisio.dcomp.ufs.br/
 
 
 * Fundamentos
-- Aplicativos Android podem ser desenvolvidos com o Android Studio/SDK em:
-	--Java
-	--Kotlin
-	--C++  
-- 
+** Aplicativos Android podem ser desenvolvidos com o Android Studio/SDK em:
+-Java
+-Kotlin
+-C++  
 
 * Queues
 
