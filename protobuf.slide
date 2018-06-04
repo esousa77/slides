@@ -1,0 +1,133 @@
+Desenvolvimento de Aplicativos para Android
+Uma breve introdução
+Tags: android
+
+Tarcisio da Rocha
+Professor, DCOMP/UFS
+tarcisio@dcomp.ufs.br
+http://tarcisio.dcomp.ufs.br/
+
+
+* Fundamentos
+
+* Linguagens  
+
+Aplicativos Android podem ser desenvolvidos com o Android Studio/SDK em:
+
+- Java
+- Kotlin
+- C++  
+
+* Compilação
+
+No processo de compilação o Android SDK gera um arquivo .apk.
+
+Um .apk contém tudo que é necessário para instalar o aplicativo em um dispositivo Android.  
+
+
+* Blocos principais
+
+Um aplicativo Android é estruturado através dos seguintes blocos:
+
+- Activities
+- Services
+- Broadcast receivers
+- Content providers
+
+* Activities
+
+* Activities: definição
+
+Cada *activity* é usada para representar as atividades de interação do usuário com o aplicativo.
+
+Normalmente representa uma tela em específico do aplicativo.
+
+
+* Activities: exemplo
+
+Em um aplicativo de email, teríamos uma activity para cada tela (interface com o usuário - UI)  como:
+
+- Exibição da lista de emails
+- Escrita de novo email
+- Leitura de email
+
+* Activities: implementação 
+
+Definir uma *activity* corresponde a implementar uma classe que herda de *Activity*:
+
+.link https://developer.android.com/reference/android/app/Activity.html
+
+	public class MinhaActivity extends Activity{
+		...
+	}
+
+* Services
+
+* Services: definição
+
+Usados para definir tarefas que devem ser executadas em *background* pelo aplicativo.
+
+Não são associadas a interfaces com o usuário.
+
+* Services: exemplo
+
+Em um aplicativo de email, um *service* poderia ser resposável por verificar junto ao servidor de email se novos emails chegaram e baixá-los automaticamente.  
+  
+* Services: implementação
+
+Definir um *service* corresponde a implementar uma classe que herda de *Service*:
+
+.link https://developer.android.com/reference/android/app/Service.html
+
+	public class MeuService extends Service{
+		...
+	}
+
+* Broadcast receivers 
+
+* Broadcast receivers: definição
+
+Programados para receber *notificações* do SO Android (ou de outro aplicativo Android). 
+
+Não possuem UI, mas podem iniciar uma Activity existente.
+ 
+
+* Broadcast receivers: exemplo
+
+Pode ser usado para receber uma notificação do sistema quando a bateria do dispositivo estiver acabando ou a tela ter apagado.
+ 
+* Broadcast receivers: implementação
+
+Herdar da classe *BroadcastReceiver*
+
+.link https://developer.android.com/reference/android/content/BroadcastReceiver.html
+
+	public class MeuBroadcastReceiver extends BroadcastReceiver{
+		...
+	}
+	
+* Content providers
+  
+* Content providers: definição
+
+Usado para compartilhar dados(conteúdo) entre aplicativos de forma persistente. 
+
+Cada content provider pode incorporar suas próprias permissões de acesso.  
+
+Também  pode ser usado para salvar dados do aplicativo de forma persistente sem fim de compartilhamento (no SQLite, por exemplo).
+
+* Content providers: exemplo
+
+O sistema Android disponibiliza um content provider que gerencia as informações de contato do usuário como nome, email...
+
+Um aplicativo de email pode ter um content provider para compartilhar dados dos contatos de email com outros aplicativos. 
+
+* Content providers: implementação
+
+Herdar da classe *ContentProvider*
+
+.link https://developer.android.com/reference/android/content/ContentProvider.html
+
+	public class MeuContentProvider extends ContentProvider{
+		...
+	}
